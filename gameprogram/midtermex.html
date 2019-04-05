@@ -51,13 +51,19 @@
     }
     function handleTick(e) {
         //start();
+        timerTime--;
+        if(timerTime==0)
+        {
+            createjs.Text("Your Score is"+score); 
+        }
         stage.update();
         updateCircle();
         renderCircle();
         // checkcollision();
     }
     function start() {
-     
+     var startTime = (new Date()).getTime();
+var timerTime=60;
         circle1 = new createjs.Shape();
         circle1.graphics.beginStroke('#000');
         circle1.graphics.beginFill('#FFF000');
