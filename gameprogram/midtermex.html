@@ -43,6 +43,7 @@
     }
     function init() {
         stage = new createjs.Stage(document.getElementById('canvas'));
+         createjs.Touch.enable(stage);
         start();
         createjs.Ticker.addEventListener("tick", handleTick);
         createjs.Ticker.setFPS(60);
@@ -64,7 +65,7 @@
         circle1.x = 800;
         circle1.y = 300;
         stage.addChild(circle1);
-         createjs.Touch.enable(stage);
+        
         //RECTANGLE
         rectangle = new createjs.Shape();
         rectangle.graphics.beginStroke('#000');
