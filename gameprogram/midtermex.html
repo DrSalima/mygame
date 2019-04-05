@@ -54,8 +54,10 @@
         timerTime--;
         if(timerTime==0)
         {
-            createjs.Text("Your Score is"+score); 
+           var txt=new createjs.Text("Your Score is"+score); 
+        stage.addchild(txt);
         }
+        
         stage.update();
         updateCircle();
         renderCircle();
