@@ -60,8 +60,11 @@
         timerTime--;
         if(timerTime==0)
         {
-           var txt=new createjs.Text("Your Score is"+score); 
+            stage.removeChild(circle,circle1,rectangle);
+           var txt=new createjs.Text("Your Score is"+score,"20px Arial", "#ff7700");
+            txt.x=300;
         stage.addChild(txt);
+            
             console.log("time over");
         }
         console.log("I am here"+timerTime);
