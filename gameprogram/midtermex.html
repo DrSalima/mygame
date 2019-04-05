@@ -55,6 +55,7 @@
         // checkcollision();
     }
     function start() {
+     
         circle1 = new createjs.Shape();
         circle1.graphics.beginStroke('#000');
         circle1.graphics.beginFill('#FFF000');
@@ -63,6 +64,7 @@
         circle1.x = 800;
         circle1.y = 300;
         stage.addChild(circle1);
+         createjs.Touch.enable(stage);
         //RECTANGLE
         rectangle = new createjs.Shape();
         rectangle.graphics.beginStroke('#000');
